@@ -1,6 +1,6 @@
 # Maintainer: Lucia <bordiyan20035@gmail.com>
 pkgname=opensourcetree-git
-pkgver=1.2.9
+pkgver=1.2.10
 pkgrel=1
 pkgdesc="SourceTree-inspired Git GUI built with PyQt6"
 arch=('x86_64')
@@ -27,11 +27,11 @@ optdepends=(
 # ── Build dependencies ─────────────────────────────────────────────────────────
 makedepends=(
     'git'
-    'python-pyinstaller'   # pyinstaller
     'python-pyqt6'         # needed at build time for PyInstaller analysis
     'python-numpy'
     'python-pygments'
 )
+# Note: PyInstaller must be installed separately (e.g. via pipx install pyinstaller)
 
 provides=('opensourcetree')
 conflicts=('opensourcetree')
